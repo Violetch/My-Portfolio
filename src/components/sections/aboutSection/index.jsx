@@ -1,4 +1,3 @@
-import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { Element } from "react-scroll";
 
@@ -19,21 +18,16 @@ const AboutSection = () => {
               <p>
                 Hello, let me introduce myself, my name is Chlyn Havia, I come
                 from Indonesia, I live in Probolinggo, my hobbies are editing,
-                designing, sports and playing games.
+                designing, coding, sports and playing games.
               </p>
               <p>
-                I am a Front-End Web Developer, I have been experienced in this
-                field for about 1 year, I have no work experience but I am sure
-                I can make a good website according to your request.
+                I have been experienced in this field for about 1 year, I have
+                no work experience but I am sure I can make a good website
+                according to your request.
               </p>
             </div>
           ) : (
             <div className="flex flex-col gap-3 text-center ">
-              <p>
-                Hello, let me introduce myself, my name is Chlyn Havia, I come
-                from Indonesia, <br /> I live in Probolinggo, my hobbies are
-                editing, designing, sports and playing games.
-              </p>
               <p>
                 I am a Front-End Web Developer, I have been experienced in this
                 field <br /> for about 1 year, I have no work experience but I

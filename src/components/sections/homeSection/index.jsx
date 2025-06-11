@@ -1,4 +1,3 @@
-import React from "react";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { Link } from "react-scroll";
 import { Element } from "react-scroll";
@@ -18,7 +17,7 @@ const HomeSection = () => {
           Front-End Developer
         </h3>
         <p className="text-center mt-7 text-xl tracking-wide">
-          Hi, my name is Chlyn Havia you can call me Chlyn <br /> i am a
+          Hello, my name is Chlynhavia you can call me Chlyn <br /> i'am a
           Front-End Web Developer
         </p>
         <Link

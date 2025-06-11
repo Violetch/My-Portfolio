@@ -5,6 +5,8 @@ import { Link } from "react-scroll";
 import { NAVBAR_LIST } from "../../../constant/navbar";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="flex justify-center">
       <div className="fo-wrapper-content flex flex-col items-center  w-[1920px]">
@@ -40,7 +42,7 @@ const Footer = () => {
             <h1 className="font-semibold tracking-wider">Contact Me</h1>
             <ul className="fo-wrapper-contact flex flex-col gap-1">
               <li className="relative opacity-70 hover:opacity-100 cursor-pointer duration-200">
-                chlynhavia45@gmail.com
+                anyazosen@gmail.com
               </li>
               <li className="relative opacity-70 hover:opacity-100 w-fit cursor-pointer duration-200">
                 0823-3889-7053
@@ -49,7 +51,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="bg-neutral-900/30 mx-auto hr h-[1px]"></div>
-        <h1 className="py-7">© 2024 Chlyn Havia. All Right Reserved.</h1>
+        <h1 className="py-7">
+          © {currentYear} Chlynhavia. All Right Reserved.
+        </h1>
       </div>
     </div>
   );
