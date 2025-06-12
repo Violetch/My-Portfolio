@@ -1,4 +1,3 @@
-import React from "react";
 import { useMediaQuery } from "react-responsive";
 import NavbarBigScreen from "./NavbarBigScreen";
 import NavbarSmallScreen from "./NavbarSmallScreen";

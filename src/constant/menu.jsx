@@ -6,11 +6,11 @@ const MENU_ICONS = [
     icon: (
       <FaInstagram className="hover:text-[#C13584] duration-300" size={18} />
     ),
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/violetch.16/",
   },
   {
     icon: <FaYoutube className="hover:text-[#FF0000] duration-300" size={20} />,
-    url: "https://www.youtube.com",
+    url: "https://www.youtube.com/@Chlynnnn",
   },
   {
     icon: (

@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import { Mapping } from "../../../mapping";
 import { NAVBAR_LIST } from "../../../constant/navbar";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
@@ -37,54 +35,48 @@ const NavbarSmallScreen = () => {
             <IoCloseOutline size={30} onClick={() => setIsMenu(false)} />
           </motion.div>
           <ul className="my-auto flex flex-col text-xl gap-5">
-            <Mapping
-              of={NAVBAR_LIST}
-              render={(item, index) => (
-                <motion.li
-                  className="flex gap-2 cursor-pointer"
-                  key={index}
-                  initial={{
-                    translateY: "-50px",
-                    opacity: 0,
-                  }}
-                  animate={{
-                    translateY: "0",
-                    opacity: 1,
-                  }}
-                  transition={{ delay: item.delay, transition: 0.3 }}
+            {NAVBAR_LIST.map((item, index) => (
+              <motion.li
+                className="flex gap-2 cursor-pointer"
+                key={index}
+                initial={{
+                  translateY: "-50px",
+                  opacity: 0,
+                }}
+                animate={{
+                  translateY: "0",
+                  opacity: 1,
+                }}
+                transition={{ delay: item.delay, transition: 0.3 }}
+              >
+                <h6
+                  className={`text-neutral-400  -mt-[6px] text-[15px] ${
+                    activeIndex === index
+                      ? "opacity-0 -translate-y-3"
+                      : "opacity-1"
+                  } duration-300`}
                 >
-                  <h6
-                    className={`text-neutral-400  -mt-[6px] text-[15px] ${
-                      activeIndex === index
-                        ? "opacity-0 -translate-y-3"
-                        : "opacity-1"
-                    } duration-300`}
-                  >
-                    {item.number}
-                  </h6>
-                  <Link
-                    to={item.link}
-                    smooth={true}
-                    duration={100}
-                    className="tracking-wider hover:translate-x-3 duration-300 text-5xl font-black"
-                    onMouseEnter={() => setActiveIndex(index)}
-                    onMouseLeave={() => setActiveIndex(null)}
-                  >
-                    {item.title}
-                  </Link>
-                </motion.li>
-              )}
-            />
+                  {item.number}
+                </h6>
+                <Link
+                  to={item.link}
+                  smooth={true}
+                  duration={100}
+                  className="tracking-wider hover:translate-x-3 duration-300 text-5xl font-black"
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onMouseLeave={() => setActiveIndex(null)}
+                >
+                  {item.title}
+                </Link>
+              </motion.li>
+            ))}
           </ul>
           <div className="flex justify-center items-center mx-auto gap-12">
-            <Mapping
-              of={MENU_ICONS}
-              render={(item, index) => (
-                <a key={index} href={item.url}>
-                  {item.icon}
-                </a>
-              )}
-            />
+            {MENU_ICONS.map((item, index) => (
+              <a key={index} href={item.url}>
+                {item.icon}
+              </a>
+            ))}
           </div>
         </motion.div>
       ) : (
